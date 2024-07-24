@@ -1,0 +1,72 @@
+{
+  "name": "ticketing_tool_app",
+  "version": "0.1.0",
+  "size": {
+    "width": 5,
+    "height": 3
+  },
+  "collections":[
+    {
+      "name": "ticket_tool",
+      "schema":{
+        "columns": [
+          { "name": "teams", "type": "STRING" },
+          { "name": "ticket_name", "type": "STRING" },
+          { "name": "ticket_details", "type": "STRING" }
+        ]
+      },
+      "syncEnabled":true
+    },
+    {
+      "name": "create_team_tt",
+      "schema":{
+        "columns":[
+          {"name": "team_name", "type": "STRING"},
+          {"name": "team_member", "type": "STRING"}
+        ]
+      }
+    }
+    
+  ],
+  "workflowMapping": [
+    {
+      "alias": "send_email",
+      "modelId": null,
+      "version": null,
+      "parameters": [
+        {
+          "name": "to",
+          "aliasedName": "to",
+          "type": "person",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "sub",
+          "aliasedName": "sub",
+          "type": "text",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "body",
+          "aliasedName": "body",
+          "type": "text",
+          "list": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+
+  "mapping": [
+    {
+      "dataSetId": "d746e4a8-185c-4230-a304-d66573732186",
+      "alias": "customer_ds",
+      "fields": []
+    }
+  ],
+  "fileName": "manifest.json",
+  "id": "265a5b6e-9800-488c-ad7a-3a6b3b99eca9",
+  "proxyId":"5ed91084-cdc7-4704-8e25-b94ec7781b33"
+}
