@@ -271,11 +271,41 @@ div:empty:after, table:empty:after {
   box-sizing: border-box; 
   border-right: 1px solid #ccc; 
 }
-.side-heading{
+.cr-team-button{
+  background-color: #424C55;
+  border: 1px solid #fff;
   color: #fff;
-  font-size: 18px;
-  word-spacing: 0;
-  font-weight: 500;
+  padding: 13px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+.cr-ticket-button{
+  background-color: #424C55;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 13px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+.ma-team-button{
+  background-color: #424C55;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 13px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+.ma-ticket-button{
+  background-color: #424C55;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 13px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 150px;
 }
 .welcome-text{
   color: #fff;
@@ -340,7 +370,7 @@ div:empty:after, table:empty:after {
 .button-container{
   display: flex;
   justify-content: flex-end;
-  margin-right: 50px;
+  margin-right: 0px;
 }
 .submit-button{
   width: 100px;
@@ -414,10 +444,6 @@ div:empty:after, table:empty:after {
   color: #fff;
 }
 
-/* .teams-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-} */
-
 .teams-table tbody tr:last-of-type {
   border-bottom: 1px solid #dddddd;
 }
@@ -479,3 +505,69 @@ div:empty:after, table:empty:after {
 .delete-button:hover{
   background-color: #fff;
 }
+.tick-delete-button{
+  color: #000;
+  width: 60px;
+  background-color: #d7d6d6;
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 5px;
+}
+.email-view-ticket{
+  width: 100px;
+  padding: 8px;
+  color: #fff;
+  background-color: #0e6080;
+  border-radius: 6px;
+  border: 1px solid #fff;
+}
+.message-container{
+  display: none; 
+  background-color: #f0f4f8; 
+  color: #333; 
+  padding: 10px; 
+  border-radius: 5px; 
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.message{
+  color: #d86846;
+  border-radius: 10px;
+  padding: 7px;
+  font-weight: 600;
+  text-align: right;
+  margin-right: 0px;
+  /* animation: blinker 1s linear infinite; */
+}
+
+/* @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+} */
+
+.team-message{
+  color: #d86846;
+  border-radius: 10px;
+  padding: 7px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 0px;
+  animation: blinker 1s linear infinite;
+}
+
+/* @keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;}
+} */

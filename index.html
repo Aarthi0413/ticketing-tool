@@ -6,59 +6,45 @@
   <body>
     <header id="header">Ticketing Tool App</header>
     <hr class="hr-line"/>
-    <!-- <nav>
-      <ul>
-        <li id="nav-home"><a href="#home">Home</a></li>
-        <li id="nav-leads"><a href="#leads">Leads</a></li>
-        <li id="nav-opportunities">
-          <a href="#opportunities">Opportunities</a>
-        </li>
-        <li id="nav-reports"><a href="#reports">Reports</a></li>
-      </ul>
-    </nav> -->
 
     <div class="app-container">
       <h1 class="welcome-text" id="welcomeText"></h1>
       <div class="side-nav-container">
-        <div>
-          <h1 class="side-heading" id="createTicket">Create Ticket+</h1>
+        <div >
+          <button class="cr-team-button" id="createTicket" type="button">Create Ticket+</button>
         </div>
         <div>
-          <h1 class="side-heading" id="createTeam">Create Teams</h1>
+          <button class="cr-ticket-button" id="createTeam" type="button">Create Teams</button>
         </div>
         <div>
-          <h1 class="side-heading" id="manageTeam">Manage Teams</h1>
+          <button class="ma-team-button" id="manageTeam" type="button">Manage Teams</button>
         </div>
         <div>
-          <h1 class="side-heading" id="manageTicket">Manage Tickets</h1>
+          <button class="ma-ticket-button" id="manageTicket" type="button">Manage Tickets</button>
         </div>
       </div>
 
       <!-- Create Ticket form -->
       <div class="form-container" id="ticketForm">
-        <div class="team-container">
+        <form class="team-container">
           <h2 class="create-ticket">Create Ticket</h2>
           <label class="ticket-label" for="teamSelect">Teams</label>
-          <select id="teamSelect" class="select-team">
-            <option value="" disabled selected>Select Team</option>
-            <option value="Admin">Admin</option>
-            <option value="Finance">Finance</option>
-            <option value="HR">HR</option>
-            <option value="IT">IT</option>
+          <select id="teamSelect" class="select-team" required>
           </select>
           <lable class="ticket-label">Ticket Name</lable>
-          <input type="text" placeholder="Name" class="ticket-name-input" id="ticketName"/>
+          <input type="text" placeholder="Name" class="ticket-name-input" id="ticketName" />
           <label class="ticket-label">Ticket Details</label>
           <input type="text" placeholder="Details" class="ticket-name-input" id="ticketDetails" />
           <div class="button-container">
             <button type="button" onclick="submitForm()" class="submit-button">Submit</button>
           </div>
-        </div>
+          <p id="errorMessage"></p>
+        </form>
       </div>
 
       <!-- Create Team Form -->
       <div class="form-container" id="createForm">
-        <div class="team-container">
+        <form class="team-container">
           <h2 class="create-ticket">Create Teams</h2>
           <lable class="ticket-label">Team Name</lable>
           <input type="text" placeholder="Name" class="ticket-name-input" id="createTeamName"/>
@@ -68,24 +54,17 @@
           <div class="save-button-container">
             <button type="button" id="saveTeamButton" class="save-button">Save Team</button>
           </div>
-        </div>
+          <p id="teamMessage"></p>
+        </form>
       </div>
 
       <!-- Manage Team Form -->
-
-      <!-- <div class="form-container" id="manageForm">
-        <div class="team-container">
-          <p><strong>Team Name:</strong> <span id="manageTeamNameDisplay"></span></p>
-          <ul id="manageMembersDisplay">
-          </ul>
-        </div>
-      </div> -->
-
       <div class="form-container" id="manageForm">
         <div class="team-container">
             <h2 class="create-ticket">Manage Teams</h2>
             <div id="teamDisplay"></div>
-        </div>
+            <p id="manageTeamMessage" class="message"></p>
+        </div>       
       </div>
 
       <!-- Manage Ticket -->
@@ -93,9 +72,9 @@
         <div class="team-container">
             <h2 class="create-ticket">Manage Ticket</h2>
             <div id="ticketDisplay"></div>
+            <p id="manageTicketMessage" class="message"></p>     
         </div>
       </div>
-
     </div>
 
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "size": {
     "width": 5,
-    "height": 3
+    "height": 4
   },
   "collections":[
     {
@@ -22,7 +22,8 @@
       "schema":{
         "columns":[
           {"name": "team_name", "type": "STRING"},
-          {"name": "team_member", "type": "STRING"}
+          {"name": "team_member", "type": "STRING"},
+          {"name": "team_member_id", "type":"STRING"}
         ]
       }
     }
